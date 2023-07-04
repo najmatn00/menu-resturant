@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: Robt_bold;
+    src: url(/src/assets/fonts/Roboto-Bold.woff);
+  }
+  @font-face {
+    font-family: Robt_medium;
+    src: url(/src/assets/fonts/Roboto-Medium.woff);
+  }
+  @font-face {
+    font-family: Robt_black;
+    src: url(/src/assets/fonts/Roboto-Black.woff);
+  }
+  @font-face {
+    font-family: Robt_black_italic;
+    src: url(/src/assets/fonts/Roboto-BlackItalic.woff);
+  }
+  @font-face {
+    font-family: Robt_italic;
+    src: url(/src/assets/fonts/Roboto-Italic.woff);
+  }
+  @font-face {
+    font-family: Robt_light;
+    src: url(/src/assets/fonts/Roboto-Light.woff);
+  }
+  @font-face {
+    font-family: Robt_light_italic;
+    src: url(/src/assets/fonts/Roboto-LightItalic.woff);
+  }
+  @font-face {
+    font-family: Robt_medium_italic;
+    src: url(/src/assets/fonts/Roboto-MediumItalic.woff);
+  }
+  @font-face {
+    font-family: Robt_regular;
+    src: url(/src/assets/fonts/Roboto-Regular.woff);
+  }
+  @font-face {
+    font-family: Robt_Thin;
+    src: url(/src/assets/fonts/Roboto-Thin.woff);
+  }
+  @font-face {
+    font-family: Robt_Thinitalic;
+    src: url(/src/assets/fonts/Roboto-ThinItalic.woff);
+  }
+  .Robt_bold{
+    font-family:Robt_bold !important;
+  }
+  .Robt_medium{
+    font-family:Robt_medium !important;
+  }
+  .Robt_regular{
+    font-family: Robt_regular !important;
+  }
