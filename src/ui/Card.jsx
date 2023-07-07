@@ -1,6 +1,6 @@
-import img from "../../assets/img/foodd.png";
-import cartImg from "../../assets/img/unnamed.png";
-import { useContextState} from "../../CreatContex";
+import img from "../assets/img/foodd.png";
+import cartImg from "../assets/img/unnamed.png";
+import { useContextState} from "../CreatContex";
 import { useRef } from "react"; 
 
 const Card = () => {

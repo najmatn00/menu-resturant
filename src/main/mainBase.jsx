@@ -1,6 +1,7 @@
-import Button from "../Button";
-import Card from "./Card";
-import img from "../../assets/img/foodd.png";
+import Button from "../ui/Button";
+import Card from "../ui/Card";
+import img from "../assets/img/foodd.png";
+
 const MainBase = () => {
     return ( <>
     <div className="flex  justify-evenly mt-4">
