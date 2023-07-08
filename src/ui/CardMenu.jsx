@@ -8,7 +8,6 @@ import StarAcardionItem from "../layout/starAcardionItem";
 const CardMenu = () => {
     let text=" Lorem ipsum dolor sit amet."
   
-    
     let [foodlist,setfoodlist]=useState(menuList);
     let clickHandlerCategory=(event)=>{
         setfoodlist(menuList.filter((item)=>{
