@@ -75,6 +75,9 @@ const CardMenu = () => {
         // }))
         console.log((event));
     }
+    let deletHandler=()=>{
+        setfoodlist(menuList)
+    }
     return ( <div className="flex">
     <div className="flex w-4/5 justify-evenly mt-6 flex-wrap gap-8 ml-4">
         {foodlist.map((item)=>{
@@ -87,37 +90,37 @@ const CardMenu = () => {
        <div className="flex justify-around flex-col">
             <div className="flex justify-between">
             <h2>filters</h2>
-            <p>delet filters</p>
+            <p className="cursor-pointer" onClick={deletHandler}>delet filters</p>
        </div>
-       <Accordion title={"category"}>
+       <Accordion  title={"category"}>
        <ul>
-            <li onClick={clickHandlerCategory}>pasta</li>
-            <li onClick={clickHandlerCategory}>burger</li>
-            <li onClick={clickHandlerCategory}>pizza</li>
+            <li className="cursor-pointer" onClick={clickHandlerCategory}>pasta</li>
+            <li className="cursor-pointer" onClick={clickHandlerCategory}>burger</li>
+            <li className="cursor-pointer" onClick={clickHandlerCategory}>pizza</li>
        </ul>
        </Accordion>
        <Accordion title={"price"}/>
        <Accordion title={"star"}> 
        <ul>
-       <li onClick={clickHandlerStar} className="flex items-center">
+       <li  onClick={clickHandlerStar} className="cursor-pointer flex items-center ">
         <AiOutlineStar/>
        </li>
-       <li onClick={clickHandlerStar} className="flex items-center">
-        <AiOutlineStar/>
-        <AiOutlineStar/>
-       </li>
-       <li onClick={clickHandlerStar} className="flex items-center">
-        <AiOutlineStar/>
+       <li  onClick={clickHandlerStar} className="cursor-pointer flex items-center">
         <AiOutlineStar/>
         <AiOutlineStar/>
        </li>
-       <li onClick={clickHandlerStar} className="flex items-center">
-        <AiOutlineStar/>
+       <li  onClick={clickHandlerStar} className="cursor-pointer flex items-center">
         <AiOutlineStar/>
         <AiOutlineStar/>
         <AiOutlineStar/>
        </li>
-       <li onClick={clickHandlerStar} className="flex items-center">
+       <li  onClick={clickHandlerStar} className="cursor-pointer flex items-center">
+        <AiOutlineStar/>
+        <AiOutlineStar/>
+        <AiOutlineStar/>
+        <AiOutlineStar/>
+       </li>
+       <li  onClick={clickHandlerStar} className="cursor-pointer flex items-center">
         <AiOutlineStar/>
         <AiOutlineStar/>
         <AiOutlineStar/>

@@ -14,7 +14,7 @@ const Accordion = ({title,children}) => {
     return ( <>
        <div className="flex justify-between items-center mt-2">
         <p>{title}</p>
-        <FaAngleDown onClick={clickHandler}/>
+        <FaAngleDown className='cursor-pointer' onClick={clickHandler}/>
        </div>
        {show && <div className='pl-4 py-2'>{children} </div>}
     </> );

@@ -54,3 +54,12 @@
   .Robt_regular{
     font-family: Robt_regular !important;
   }
+  .foodname{
+    font-family:Robt_medium !important;
+  }
+  .dis{
+     font-family: Robt_regular !important;
+  }
+  .price,.star{
+     font-family: Robt_italic;
+  }
