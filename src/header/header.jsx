@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
     let navigate= useNavigate();
     let clickHandler=()=>{
-        navigate("/sign-up")
+        navigate("/signup")
     }
     let {cart}=useContextState();
     return ( <div className="h-16 flex items-center gap-32 sticky bg-[#E7E0E0]  top-0 ">
