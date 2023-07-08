@@ -3,11 +3,15 @@ import { BsHandbag } from 'react-icons/bs';
 import Button from "../ui/Button"
 import { useContextState } from "../CreatContex";
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import SignUp from "../signup/signup";
 
 const Header = () => {
     let navigate= useNavigate();
+    let [showPubhup,setShowPubhup]=useState(false);
     let clickHandler=()=>{
-        navigate("/signup")
+        // navigate("/signup")
+        setShowPubhup(true)
     }
     let {cart}=useContextState();
     return ( <div className="h-16 flex items-center gap-32 sticky bg-[#E7E0E0]  top-0 ">
@@ -34,6 +38,7 @@ const Header = () => {
         
     </div>
     <Button click={clickHandler}  textColor={" text-white"}>Sign Up</Button>
+    {showPubhup && <SignUp/>}
     </div>
     </div> );
 }
