@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import SignUp from "../signup/signup";
 
+
 const Header = () => {
     let navigate= useNavigate();
     let [showPubhup,setShowPubhup]=useState(false);
@@ -38,7 +39,7 @@ const Header = () => {
         
     </div>
     <Button click={clickHandler}  textColor={" text-white"}>Sign Up</Button>
-    {showPubhup && <SignUp/>}
+    {showPubhup && <SignUp closeHandler={setShowPubhup}/>}
     </div>
     </div> );
 }
