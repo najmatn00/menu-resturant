@@ -14,7 +14,7 @@ const Header = () => {
         setShowPubhup(true)
     }
     let {cart}=useContextState();
-    return ( <div className="h-16 flex items-center gap-32 sticky bg-[#E7E0E0]  top-0 ">
+    return ( <div className="h-16 flex items-center gap-32 sticky bg-[#E7E0E0] z-40  top-0 ">
     <Link to={"/"} className="block">
     <div className="flex ml-24">
         <h2  className="Robt_medium text-3xl">F</h2>

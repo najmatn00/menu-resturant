@@ -9,7 +9,7 @@ import SignUp from './signup/signup'
 function App() {
  return(
  <CreatContext>
-    <div className="bg-[#E7E0E0] ">
+    <div className="bg-[#E7E0E0] min-h-screen ">
         <Header/>
         <Routes>
             <Route path='/' element={<MainBase/>} />
