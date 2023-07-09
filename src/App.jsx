@@ -6,6 +6,7 @@ import { Route,Routes } from 'react-router-dom'
 import MenuPage from './menu/menupage'
 // import SignUp from './signup/signup'
 import Contact from './contact/contact'
+import ABoutUS from './aBoutUs/aboutus'
 
 function App() {
  return(
@@ -15,7 +16,7 @@ function App() {
         <Routes>
             <Route path='/' element={<MainBase/>} />
             <Route path='/menupage' element={<MenuPage/>}/>
-            <Route path='/about-us' element={<h1>about us</h1>}/>
+            <Route path='/about-us' element={<ABoutUS/>}/>
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/*' element={<h1>404</h1>}/>
             {/* <Route path='/signup' element={<SignUp/>}/> */}
