@@ -30,8 +30,8 @@ const CardMenu = () => {
     let deleteHandler=()=>{
         setfoodlist(menuList);
     }
-    return ( <div className="flex md:flex-col">
-                <div className="flex w-4/5 justify-evenly mt-6 flex-wrap gap-8 ml-4">
+    return ( <div className="flex flex-col-reverse md:flex-row">
+                <div className="flex md:w-4/5 justify-evenly mt-6 flex-wrap gap-8 ml-4">
                     {foodlist.map((item)=>{
                         return <LiMenu foodName={item["name"]} price={item["price"]} category={item["category"]} key={item["key"]} discripton={text} star={item["star"]}></LiMenu>
                     })}
