@@ -24,20 +24,23 @@ const ContactForm = () => {
         console.log("submit");
     }
     return ( <>
-        <div className=" rounded-xl h-96 bg-white p-4 flex gap-4">
+        <div className=" rounded-xl md:h-96 bg-white p-4 flex flex-col md:flex-row gap-4 w-full">
                 <div className=" flex flex-col gap-4">
                     <p>Contact Form</p>
                     <input onChange={ChangeHandlerUserName} type="text" placeholder="user name"  className="border border-gray-300 py-2 px-4 rounded-md" />
                     <input onChange={ChangeHandlerEmail} type="email" placeholder="Email"  className="border border-gray-300 py-2 px-4 rounded-md"/>
                     <input onChange={ChangeHandlerPws} type="pasword "  placeholder="pasword" className="border border-gray-300 py-2 px-4 rounded-md"/>
-                    <Button click={onClickSubmit}  classCss=' py-2 px-6 bg-[#d41a27] text-white  rounded-md '>
+                    <Button click={onClickSubmit}  classCss=' hidden md:static py-2 px-6 bg-[#d41a27] text-white  rounded-md '>
                         submit
                     </Button>
                 </div>
                 <div className="flex flex-col h-full">
                     <label htmlFor="">maseges</label>
-                    <input onChange={ChangeHandlerText} type="text" className="border-2 border-gray-300 rounded-md h-full w-64"  />
+                    <input onChange={ChangeHandlerText} type="text" className="border-2 border-gray-300 rounded-md h-64 md:h-full md:w-64"  />
                 </div>
+                <Button click={onClickSubmit}  classCss=' py-2 px-6 bg-[#d41a27] text-white  rounded-md  md:hidden '>
+                        submit
+                 </Button>
                 
         </div>
     </> );
