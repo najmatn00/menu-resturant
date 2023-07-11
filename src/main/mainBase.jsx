@@ -1,5 +1,6 @@
 import Button from "../ui/Button";
-import Card from "../ui/Cardmain";
+
+
 import img from "../assets/img/foodd.png";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -18,8 +19,10 @@ const MainBase = () => {
         <Button color={"bg-white"} textColor={" text-black"}>Book A Table </Button>
     </div>
     <div className="flex justify-evenly items-center">
-    {/* <Card/> */}
-   
+    {/* <Card/>
+    <Card/>
+    <Card/>
+    <Card/> */}
     </div>
    
     </>);

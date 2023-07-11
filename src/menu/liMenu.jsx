@@ -7,8 +7,36 @@ const LiMenu = ({foodName,discripton,star,price,category,key,item}) => {
     
    
     let clickHandler=()=>{
-        setCart(e=>[...e,item])
-        // console.log(cart);
+        
+        let pushProdact={
+            prodact:item,
+            count:1
+        }
+        
+        let respanse =cart.find(e=>e.prodact.name===item.name);
+        // respanse is check the item click is in the order list or not
+        if (undefined!==respanse){
+           
+                setCart(e => {
+                    // e is all the item in list 
+                  return e.map(obj => {
+                    if (obj.prodact.name === respanse.prodact.name) {
+                        
+                      return { ...obj, count: obj.count+=.5 };
+                    }
+                    return obj;
+                  });
+                });
+             
+              
+        }else{
+            // when this code run this mean the item is not in the order
+            console.log("cant find");
+            setCart(e=>[...e,pushProdact])
+            console.log("obj added ");
+
+        }
+        console.log(cart);
     }
     return ( <>
     <ul>
