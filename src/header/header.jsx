@@ -2,7 +2,7 @@ import Li from "./Li";
 import { BsHandbag } from 'react-icons/bs';
 import Button from "../ui/Button"
 import { useContextState } from "../CreatContex";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,NavLink } from "react-router-dom";
 import { useState } from "react";
 import SignUp from "../signup/signup";
 
@@ -14,6 +14,14 @@ const Header = () => {
         // navigate("/signup")
         setShowPubhup(true)
     }
+    let isActivePage = (e)=>{
+        if (e.isActive){
+            return "text-[#d41a27]"
+        }
+        else{
+            return "text-black"
+        }
+    }
     let {cart}=useContextState();
     return ( <div className=" h-16 flex justify-between px-2 md:px-0 items-center md:gap-32 sticky bg-[#E7E0E0] z-40  top-0 ">
             <Link to={"/"} className="block">
@@ -24,10 +32,18 @@ const Header = () => {
             </div>
             </Link>
             <div className="md:flex md:gap-20 hidden">
-                <Li color={"text-red-600"}><Link to='/'>Home</Link></Li>
-                <Li><Link to='/menupage'>Menu</Link></Li>
-                <Li><Link to={'/about-us'}>About us</Link></Li>
-                <Li><Link to={'/contact'}>Contact</Link></Li>
+                <Li>
+                    <NavLink to='/' className={isActivePage}>Home</NavLink>
+                </Li>
+                <Li>
+                    <NavLink className={isActivePage} to='/menupage'>Menu</NavLink>
+                </Li>
+                <Li>
+                    <NavLink className={isActivePage} to={'/about-us'}>About us</NavLink>
+                </Li>
+                <Li>
+                    <NavLink className={isActivePage} to={'/contact'}>Contact</NavLink>
+                </Li>
             </div>
             <div className="flex items-center gap-4 ml-6">
                 <div className=" relative">
