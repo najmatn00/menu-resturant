@@ -8,16 +8,16 @@ const ContactForm = () => {
         text:"text"
     });
     let ChangeHandlerUserName=(evet)=>{
-        console.log(evet.target.value);
+        // console.log(evet.target.value);
     }
     let ChangeHandlerPws=(evet)=>{
-        console.log(evet.target.value);
+        // console.log(evet.target.value);
     }
     let ChangeHandlerEmail=(evet)=>{
-        console.log(evet.target.value);
+        // console.log(evet.target.value);
     }
     let ChangeHandlerText=(evet)=>{
-        console.log(evet.target.value);
+        // console.log(evet.target.value);
     }
     let onClickSubmit=()=>{
         // this function use to submit the date whit POST method

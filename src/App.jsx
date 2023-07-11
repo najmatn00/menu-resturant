@@ -7,6 +7,7 @@ import MenuPage from './menu/menupage'
 // import SignUp from './signup/signup'
 import Contact from './contact/contact'
 import ABoutUS from './aBoutUs/aboutus'
+import ShopCart from './shoppingCard/shoppCart'
 
 function App() {
  return(
@@ -20,6 +21,7 @@ function App() {
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/*' element={<h1>404</h1>}/>
             {/* <Route path='/signup' element={<SignUp/>}/> */}
+            <Route path='/shoppCart/' element={<ShopCart/>}></Route>
 
         </Routes>
        

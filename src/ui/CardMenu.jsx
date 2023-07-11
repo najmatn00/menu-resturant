@@ -12,13 +12,13 @@ const CardMenu = () => {
         setfoodlist(menuList.filter((item)=>{
           return  item.category===event.target.innerText
         }))
-        // console.log(event.target.innerText);
+        
     }
     let clickHandlerStar=(event)=>{
         // setfoodlist(menuList.filter((item)=>{
             // return item.star===(event.target.length)
         // }))
-        console.log((event.target));
+      
     }
     let changeHandlerRangePrice=(event)=>{
         
@@ -33,7 +33,7 @@ const CardMenu = () => {
     return ( <div className="flex">
                 <div className="flex w-4/5 justify-evenly mt-6 flex-wrap gap-8 ml-4">
                     {foodlist.map((item)=>{
-                        return <LiMenu foodName={item["name"]} price={item["price"]} category={item["category"]} key={item["key"]} discripton={text} star={item["star"]}></LiMenu>
+                        return <LiMenu foodName={item["name"]} price={item["price"]} category={item["category"]} key={item["key"]} discripton={text} star={item["star"]} item={item}></LiMenu>
                     })}
                 
                 </div>
