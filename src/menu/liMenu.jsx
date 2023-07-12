@@ -7,7 +7,6 @@ const LiMenu = ({foodName,discripton,star,price,category,key,item}) => {
     
    
     let clickHandler=()=>{
-        
         let pushProdact={
             prodact:item,
             count:1

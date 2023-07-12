@@ -16,8 +16,8 @@ const Order = ({name,discripton,star,price,count}) => {
                         </div>
                         <p className="ml-28">price : {price} &</p>
                         <div className="flex items-center ">
-                        <p className="ml-20">quantity :{count} </p>
-                        <p className="border w-6 h-6 text-center">{}</p>
+                        <p className="ml-20 ">quantity :</p>
+                        <p className="border w-6 h-6 text-center">{count} </p>
                     </div>
                 </li>
             </div>

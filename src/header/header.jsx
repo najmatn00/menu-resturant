@@ -20,6 +20,14 @@ const Header = () => {
             return "text-red-600"
         }
     }
+    let countItem=()=>{
+        let count=0;
+        cart.forEach(element => {
+            count=element.count+count;
+        }
+        );
+        return count;
+    }
     return ( <div className="h-16 flex items-center gap-32 sticky bg-[#E7E0E0] z-40  top-0 ">
     <Link to={"/"} className="block">
     <div className="flex ml-24">
@@ -37,8 +45,8 @@ const Header = () => {
     <div className="flex items-center gap-4 ml-6">
     <div className=" relative">
         <Link to={'/shoppCart'}><BsHandbag className="w-6 h-6  top-0"/></Link>
-        {cart.length>0?
-        (<div className="border rounded-full w-6 h-6 bg-red-600 absolute -top-2 left-4 text-xs text-center flex justify-center items-center text-white">{cart.length}</div>)
+        {countItem()>0?
+        (<div className="border rounded-full w-6 h-6 bg-red-600 absolute -top-2 left-4 text-xs text-center flex justify-center items-center text-white">{countItem()}</div>)
         :null
     }
         

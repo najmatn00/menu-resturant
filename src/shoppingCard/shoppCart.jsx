@@ -8,7 +8,7 @@ const ShopCart = () => {
             <div className="flex">
                 <div className="">
                     {cart.map(e=>{
-                       let {prodact,count}= e;
+                       let {prodact}= e;
                        console.log(prodact);
                         return (
                             <Order
@@ -16,7 +16,7 @@ const ShopCart = () => {
                             price={prodact.price} 
                             star={prodact.star} 
                             discripton={prodact.discripton}
-                            count={count}
+                            count={e.count}
                             />
                             
                         )
