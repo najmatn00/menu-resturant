@@ -1,56 +1,56 @@
  export let menuList=[{
     "name":"italian pasta",
     "price":23,
-    "id":"1",
+    "id":1,
     "category":"pasta",
     "star":"5"
 },
 {
     "name":"hamburger",
     "price":12,
-    "id":"2",
+    "id":2,
     "category":"burger",
     "star":"4"
 },
 {
     "name":"cheesburger",
     "price":18,
-    "id":"3",
+    "id":3,
     "category":"burger",
     "star":"4"
 },
 {
     "name":"Donner",
     "price":27,
-    "id":"4",
+    "id":4,
     "category":"burger",
     "star":"5"
 },
 {
     "name":"margarita",
     "price":23,
-    "id":"5",
+    "id":5,
     "category":"pizza",
     "star":"3"
 },
 {
     "name":"calzone",
     "price":28,
-    "id":"6",
+    "id":6,
     "category":"pizza",
     "star":"2"
 },
 {
     "name":"vegetable pasta",
     "price":12,
-    "id":"7",
+    "id":7,
     "category":"pasta",
     "star":"5"
 },
 {
     "name":"lopez spcial",
     "price":17,
-    "id":"8",
+    "id":8,
     "category":"pasta",
     "star":"4"
 }

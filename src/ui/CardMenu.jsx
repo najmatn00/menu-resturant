@@ -3,7 +3,7 @@ import LiMenu from "../menu/liMenu";
 
 import { menuList } from "../data/menu-lis";
 import FiltterProdact from "../layout/filtter";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const CardMenu = () => {
     let text=" Lorem ipsum dolor sit amet."
@@ -34,7 +34,7 @@ const CardMenu = () => {
     return ( <div className="flex">
                 <div className="flex w-4/5 justify-evenly mt-6 flex-wrap gap-8 ml-4">
                     {foodlist.map((item)=>{
-                        return <LiMenu foodName={item["name"]} price={item["price"]} category={item["category"]} key={item["key"]} discripton={text} star={item["star"]} item={item}></LiMenu>
+                        return <Link to={item.id} ><LiMenu foodName={item["name"]} price={item["price"]} category={item["category"]} key={item["key"]} discripton={text} star={item["star"]} item={item}></LiMenu></Link>
                         
                     })}
                 

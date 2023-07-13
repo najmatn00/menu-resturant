@@ -11,7 +11,7 @@ const CheckUserLogin = ({children}) => {
             {username==="amin"?
                 children
             :
-            (<Navigate to='/'/>)
+            (<Navigate to='/signUp'/>)
             }
         </div>
     )
