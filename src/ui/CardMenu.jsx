@@ -34,7 +34,8 @@ const CardMenu = () => {
     return ( <div className="flex">
                 <div className="flex w-4/5 justify-evenly mt-6 flex-wrap gap-8 ml-4">
                     {foodlist.map((item)=>{
-                        return <Link to={item.id} ><LiMenu foodName={item["name"]} price={item["price"]} category={item["category"]} key={item["key"]} discripton={text} star={item["star"]} item={item}></LiMenu></Link>
+
+                        return <Link to={`${item.id}`}><LiMenu foodName={item["name"]} price={item["price"]} category={item["category"]} key={item["key"]} discripton={text} star={item["star"]} item={item}></LiMenu></Link>
                         
                     })}
                 

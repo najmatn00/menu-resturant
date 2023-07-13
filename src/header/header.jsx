@@ -4,7 +4,7 @@ import Button from "../ui/Button"
 import { useContextState } from "../CreatContex";
 import { Link, useNavigate,NavLink} from "react-router-dom";
 import { useState } from "react";
-import SignUp from "../signup/signup";
+import SignUp from "../signup/signIn";
 import CheckUserLogin from "../utility/checkuserLogin";
 
 
@@ -52,7 +52,7 @@ const Header = () => {
     }
         
     </div>
-    <Button click={clickHandler}  textColor={" text-white"}>Sign Up</Button>
+    <Button click={clickHandler}  textColor={" text-white"}>Sign In</Button>
     <NavLink to='/dashbord' >dashbord</NavLink>
     {showPubhup && <SignUp closeHandler={setShowPubhup}/>}
     </div>

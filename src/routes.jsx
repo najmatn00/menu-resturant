@@ -22,5 +22,6 @@ let routes = [
     {path:"/shoppCart",element:<ShopCart/>},
     {path:"/dashbord",element:<CheckUserLogin><Dashbord/></CheckUserLogin>},
     {path:"/signUp",element:<SignUpPage/>},
+   
 ];
 export default routes;

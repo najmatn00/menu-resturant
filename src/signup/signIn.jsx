@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
+import Button from '../ui/Button';
 const SignUp = ({closeHandler}) => {
 
     let clickHandlerClose=()=>{
@@ -25,7 +26,11 @@ const SignUp = ({closeHandler}) => {
     <div className="flex justify-center items-center">
     <button className="bg-[#D41B27] text-white  py-2 mt-4 rounded-xl px-36">Sign in</button>
     </div>
-    <p className="Robat_regular text-xs text-center mt-16 ">Already have an account ? Sign up</p>
+    <div className="flex items-center mt-16 justify-center gap-2">
+    <p className="Robat_regular text-xs   ">Already have an account ? </p>
+    {/* <Button textColor={"text-white"} color={" bg-[#D41B27]"}>sign up</Button> */}
+    <button className='text-[#D41B27]'>Sign Up</button>
+    </div>
     </div>
         
     </div> 
