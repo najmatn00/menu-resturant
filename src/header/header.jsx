@@ -5,6 +5,7 @@ import { useContextState } from "../CreatContex";
 import { Link, useNavigate,NavLink} from "react-router-dom";
 import { useState } from "react";
 import SignUp from "../signup/signup";
+import CheckUserLogin from "../utility/checkuserLogin";
 
 
 const Header = () => {
@@ -52,9 +53,12 @@ const Header = () => {
         
     </div>
     <Button click={clickHandler}  textColor={" text-white"}>Sign Up</Button>
+    <NavLink to='/dashbord' >dashbord</NavLink>
     {showPubhup && <SignUp closeHandler={setShowPubhup}/>}
     </div>
-    </div> );
+    </div>
+    
+    );
 }
  
 export default Header;
