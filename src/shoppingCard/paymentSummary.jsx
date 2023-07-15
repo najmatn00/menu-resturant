@@ -4,17 +4,16 @@ import Button from "../ui/Button"
 const PaymentSummary = () => {
     let {cart,setCart}=useContextState();
     let {Orders,setOrders}=useContextStateHistoryOrder();
-    // let [totalPrice,setTotalPrice]=useState(0);
-    // console.log(cart);
+
     let totalPrice=0;
     cart.map((item)=>{
-        // setTotalPrice(totalPrice+item.price)
-       
        totalPrice=totalPrice+(item.prodact.price*item.count)
     })
+
+    // this is for add orders to history
     let clickHandlerBuy = ()=>{
         totalPrice = 0
-        setOrders(cart);
+        setOrders(e=>[...e,cart]);
         setCart([]);
         console.log(Orders);
     }
