@@ -1,7 +1,7 @@
 import Button from "../ui/Button"
 const PaymentSummary = () => {
-    return (<div className="m-4">
-    <h2 className="Robt_bold m-3">Payment Summary</h2>
+    return (<div className="">
+    <h2 className="Robt_bold">Payment Summary</h2>
     <ul>
         <li className="border bg-white w-80 h-80 rounded-xl">
             <h2 className="border m-4 text-center bg-[#EBEAEF] rounded-xl">UNREGISTERED ACCOUNT</h2>
