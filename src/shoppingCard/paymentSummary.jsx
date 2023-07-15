@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { useContextState } from "../CreatContex";
+import { useContextState,useContextStateHistoryOrder } from "../CreatContex";
 import Button from "../ui/Button"
 const PaymentSummary = () => {
-    let {cart}=useContextState();
+    let {cart,setCart}=useContextState();
+    let {Orders,setOrders}=useContextStateHistoryOrder();
     // let [totalPrice,setTotalPrice]=useState(0);
     // console.log(cart);
     let totalPrice=0;
@@ -11,7 +12,13 @@ const PaymentSummary = () => {
        
        totalPrice=totalPrice+(item.prodact.price*item.count)
     })
-    console.log(totalPrice);
+    let clickHandlerBuy = ()=>{
+        totalPrice = 0
+        setOrders(cart);
+        setCart([]);
+        console.log(Orders);
+    }
+    
     return (<div className="">
     <h2 className="Robt_bold">Payment Summary</h2>
     <ul>
@@ -40,9 +47,12 @@ const PaymentSummary = () => {
                 0
                 }</p>
             </div>
-           <div className="flex items-center text-sm mt-12 justify-center">
-           <p>SALE EXPIRING IN :</p>
-            <p className="text-[hsl(355,60%,62%)] font-medium">21 HOURS, 31 MINUTES</p>
+           <div className="flex items-center mt-4 ml-4 justify-start">
+           {cart.length>0?
+                        <Button click={clickHandlerBuy} color={"text-white"}>buy !!!!</Button>
+                     :
+                        null
+                    }
            </div>
         </li>
     </ul>

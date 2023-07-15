@@ -8,6 +8,10 @@ import CheckUserLogin from './utility/checkuserLogin'
 import SignInPage from './signup/signinPage'
 import DetailProduct from './menu/detailProduct'
 import SignUp from './signup/signUp'
+import Acounts from './dashbord/Acounts'
+import OrderDashbord from './dashbord/OrderDashbord'
+
+
 let routes = [
     {path:"/",element:<MainBase/>},
     {path:'/menupage',element:<MenuPage/>, children:[
@@ -17,7 +21,10 @@ let routes = [
     {path:"/contact",element:<Contact/>},
     // {path:"/*",element:"<h1>404</h1>"},
     {path:"/shoppCart",element:<ShopCart/>},
-    {path:"/dashbord",element:<CheckUserLogin><Dashbord/></CheckUserLogin>},
+    {path:"/dashbord",element:<CheckUserLogin><Dashbord/></CheckUserLogin> ,children:[
+        {path:"order",element:<OrderDashbord/>},
+        {path:"acount",element:<Acounts/>},
+    ]},
     {path:"/signIn",element:<SignInPage/>},
     {path:"/signUp",element:<SignUp/>},
    

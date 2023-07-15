@@ -1,9 +1,10 @@
 import Order from "./order";
 import PaymentSummary from "./paymentSummary";
 import { useContextState } from "../CreatContex";
+import Button from "../ui/Button";
 const ShopCart = () => {
     let {cart} = useContextState();
-    console.log(cart);
+
     return (
             <div className="flex  justify-evenly mt-8">
                 <div className=" w-2/3 bg-white rounded-md">
@@ -27,6 +28,7 @@ const ShopCart = () => {
                      </div>
                      
                      }
+                     
                 </div>
                 <div className=" ">
                     <PaymentSummary/>
