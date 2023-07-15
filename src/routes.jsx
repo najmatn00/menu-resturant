@@ -5,12 +5,9 @@ import ShopCart from './shoppingCard/shoppCart'
 import Dashbord from './dashbord/dashbord'
 import MainBase from './main/mainBase'
 import CheckUserLogin from './utility/checkuserLogin'
-import SignUpPage from './signup/signupPage'
+import SignInPage from './signup/signinPage'
 import DetailProduct from './menu/detailProduct'
-
-
-
-
+import SignUp from './signup/signUp'
 let routes = [
     {path:"/",element:<MainBase/>},
     {path:'/menupage',element:<MenuPage/>, children:[
@@ -21,7 +18,9 @@ let routes = [
     // {path:"/*",element:"<h1>404</h1>"},
     {path:"/shoppCart",element:<ShopCart/>},
     {path:"/dashbord",element:<CheckUserLogin><Dashbord/></CheckUserLogin>},
-    {path:"/signUp",element:<SignUpPage/>},
+    {path:"/signIn",element:<SignInPage/>},
+    {path:"/signUp",element:<SignUp/>},
+   
    
 ];
 export default routes;

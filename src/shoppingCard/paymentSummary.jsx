@@ -1,5 +1,17 @@
+import { useState } from "react";
+import { useContextState } from "../CreatContex";
 import Button from "../ui/Button"
 const PaymentSummary = () => {
+    let {cart}=useContextState();
+    // let [totalPrice,setTotalPrice]=useState(0);
+    // console.log(cart);
+    let totalPrice=0;
+    cart.map((item)=>{
+        // setTotalPrice(totalPrice+item.price)
+       
+       totalPrice=totalPrice+(item.prodact.price*item.count)
+    })
+    console.log(totalPrice);
     return (<div className="">
     <h2 className="Robt_bold">Payment Summary</h2>
     <ul>
@@ -16,7 +28,7 @@ const PaymentSummary = () => {
             <div className="border h-.5 my-2 mx-2 bg-slate-100"></div>
             <div className="flex justify-between mx-3 mt-2">
                 <p className="text-[#ddd1e9]">Order Summary</p>
-                <p>$122</p>
+                <p>{totalPrice}</p>
             </div>
             <div className="flex justify-between mx-3 mt-2">
                 <p className="text-[#ddd1e9]">Additional Servise</p>
@@ -24,7 +36,9 @@ const PaymentSummary = () => {
             </div>
             <div className="flex justify-between mx-3 mt-2">
                 <p className="text-[#ddd1e9]">Total Ampount</p>
-                <p>$132</p>
+                <p>{totalPrice>0? totalPrice+10:
+                0
+                }</p>
             </div>
            <div className="flex items-center text-sm mt-12 justify-center">
            <p>SALE EXPIRING IN :</p>

@@ -1,8 +1,5 @@
 import Button from "../ui/Button";
-
-
 import img from "../assets/img/foodd.png";
-
 import { Link, useNavigate } from "react-router-dom";
 const MainBase = () => {
     let navigate=useNavigate();

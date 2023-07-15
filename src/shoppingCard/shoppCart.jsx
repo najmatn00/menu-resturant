@@ -5,7 +5,7 @@ const ShopCart = () => {
     let {cart} = useContextState();
     console.log(cart);
     return (
-            <div className="flex  justify-evenly">
+            <div className="flex  justify-evenly mt-8">
                 <div className=" w-2/3 bg-white rounded-md">
                    {cart.length>0?
                     cart.map(e=>{

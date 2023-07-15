@@ -1,22 +1,12 @@
-import { useState } from 'react';
-import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-const SignIn = ({closeHandler}) => {
-    let clickHandlerClose=()=>{
-        closeHandler(false)
-    }
-    let navigate=useNavigate();
-    let clickHandlerbutton=()=>{
-        navigate("signUp");
-    }
-    return (<>
-    
-    <div className="bg-transparant-black flex justify-center items-center h-screen w-screen fixed top-16 left-0 ">
+const SignUp = () => {
+    return ( <>
+    <div className=" flex justify-center items-center h-screen w-screen fixed top-16 left-0 bg-transparant-black ">
     <div className=" border bg-[#EBE9F5] w-96 h-96 rounded-3xl">
     <div className="flex items-center">
-    <p className="Robt_bold m-4">Sign In</p>
+    <p className="Robt_bold m-4">Sign Up</p>
     <div className="ml-64">
-        <AiOutlineCloseCircle onClick={clickHandlerClose} className='w-8 h-8'/>
+        <AiOutlineCloseCircle className='w-8 h-8'/>
     </div>
     </div>
     <div className="w-full h-0.5 bg-white"></div>
@@ -31,7 +21,7 @@ const SignIn = ({closeHandler}) => {
     <div className="flex items-center mt-16 justify-center gap-2">
     <p className="Robat_regular text-xs   ">Already have an account ? </p>
     {/* <Button textColor={"text-white"} color={" bg-[#D41B27]"}>sign up</Button> */}
-    <button onClick={clickHandlerbutton} className='text-[#D41B27] '>Sign Up</button>
+    <button className='text-[#D41B27]' >Sign Up</button>
     </div>
     </div>
         
@@ -39,4 +29,4 @@ const SignIn = ({closeHandler}) => {
     </> );
 }
  
-export default SignIn;
+export default SignUp;
