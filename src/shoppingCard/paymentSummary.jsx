@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useContextState,useContextStateHistoryOrder } from "../CreatContex";
 import Button from "../ui/Button"
+
 const PaymentSummary = () => {
     let {cart,setCart}=useContextState();
     let {Orders,setOrders}=useContextStateHistoryOrder();
@@ -13,11 +14,19 @@ const PaymentSummary = () => {
     // this is for add orders to history
     let clickHandlerBuy = ()=>{
         totalPrice = 0
-        setOrders(e=>[...e,cart]);
+        const time = new Date().toLocaleTimeString();
+        setOrders(e=>{
+            return [...e, {
+                "time":time,
+                "prodact":cart,
+                "id":Math.floor(Math.random() * 100000)
+            }]
+        })
         setCart([]);
         console.log(Orders);
     }
-    
+
+ 
     return (<div className="">
     <h2 className="Robt_bold">Payment Summary</h2>
     <ul>
