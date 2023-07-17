@@ -11,11 +11,11 @@ const CartOrder = ({id,time,prodact}) => {
     let clickHandlerShowMore=()=>{
         setShowMore(true)
     }
-    console.log(prodact.length);
+    
     return (
         <>
-        
-            <div className="flex border-2 border-orange-300 bg-white rounded-2xl h-24 items-center ">
+
+            <div className="flex border-2 border-orange-300 bg-white rounded-2xl h-24 items-center w-full ">
             <div className="flex w-1/2 flex-col items-start ml-4 gap-2">
                 <h1 className="text-xl">#{id}</h1>
                 <p className="text-xs cursor-pointer" onClick={clickHandlerShowMore}>show more</p>
