@@ -51,9 +51,6 @@ const DetailProduct = () => {
         console.log(cart);
     
     }
-    let clickHandlerBtn=()=>{
-      console.log("true");
-    }
     return ( 
         <>
         {showPubhup &&

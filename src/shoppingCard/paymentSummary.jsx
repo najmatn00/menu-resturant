@@ -6,20 +6,26 @@ const PaymentSummary = () => {
     let {cart,setCart}=useContextState();
     let {Orders,setOrders}=useContextStateHistoryOrder();
 
-    let totalPrice=0;
-    cart.map((item)=>{
-       totalPrice=totalPrice+(item.prodact.price*item.count)
-    })
-
+    let totalPrice;
+    let getTotal=(items)=>{
+        
+        totalPrice=0;
+        items.map(item=>{
+            totalPrice+=item.prodact.price*item.count
+        })
+        return totalPrice
+    }
     // this is for add orders to history
     let clickHandlerBuy = ()=>{
         totalPrice = 0
-        const time = new Date().toLocaleTimeString();
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() ;
         setOrders(e=>{
             return [...e, {
                 "time":time,
                 "prodact":cart,
-                "id":Math.floor(Math.random() * 100000)
+                "id":Math.floor(Math.random() * 100000),
+                "total":getTotal(cart)
             }]
         })
         setCart([]);
@@ -43,7 +49,7 @@ const PaymentSummary = () => {
             <div className="border h-.5 my-2 mx-2 bg-slate-100"></div>
             <div className="flex justify-between mx-3 mt-2">
                 <p className="text-[#ddd1e9]">Order Summary</p>
-                <p>{totalPrice}</p>
+                <p>{getTotal(cart)}</p>
             </div>
             <div className="flex justify-between mx-3 mt-2">
                 <p className="text-[#ddd1e9]">Additional Servise</p>
@@ -51,7 +57,7 @@ const PaymentSummary = () => {
             </div>
             <div className="flex justify-between mx-3 mt-2">
                 <p className="text-[#ddd1e9]">Total Ampount</p>
-                <p>{totalPrice>0? totalPrice+10:
+                <p>{getTotal(cart)>0? getTotal(cart)+10:
                 0
                 }</p>
             </div>
