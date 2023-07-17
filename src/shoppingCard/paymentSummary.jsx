@@ -14,7 +14,8 @@ const PaymentSummary = () => {
     // this is for add orders to history
     let clickHandlerBuy = ()=>{
         totalPrice = 0
-        const time = new Date().toLocaleTimeString();
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() ;
         setOrders(e=>{
             return [...e, {
                 "time":time,
