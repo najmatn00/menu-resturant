@@ -35,9 +35,9 @@ const CardMenu = () => {
         setfoodlist(menuList);
     }
     
-    return ( <div className="flex">
-                <div className="flex w-4/5 justify-evenly mt-6 flex-wrap gap-8 ml-4">
-                    {foodlist.map((item)=>{
+    return ( <div className="flex flex-col-reverse md:flex-row">
+    <div className="flex md:w-4/5 justify-evenly mt-6 flex-wrap gap-8 ml-4">
+        {foodlist.map((item)=>{
 
                         return <Link  
                         

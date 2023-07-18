@@ -4,23 +4,25 @@ import imgfood from '../assets/img/foodd.png';
 const Order = ({name,discripton,star,price,count}) => {
     
     return ( 
-            <div>
-                <li className="bg-white mx-12 mt-6  border rounded-xl list-none  p-6 flex items-center gap-2" >
+            <>
+                <li className="bg-white md:mx-12 mt-6 p-4 md:p-6  border rounded-xl list-none  flex  items-center md:gap-2" >
                     <div className="">
                         <img className="w-24 h-24 rounded-full" src={imgfood} alt="" srcset="" />
                     </div>
-                    <div className="">
-                        <p>{name}</p> 
-                        <p>{discripton}</p>
-                        <p>star : {star}</p>
+                   <div className="flex pl-8 md:-pl-0  justify-center flex-col md:flex-row">
+                        <div className="">
+                                <p>{name}</p> 
+                                <p>{discripton}</p>
+                                <p>star : {star}</p>
                         </div>
-                        <p className="ml-28">price : {price} &</p>
+                                <p className="md:ml-28">price : {price} &</p>
                         <div className="flex items-center ">
-                        <p className="ml-20 ">quantity :</p>
-                        <p className="border w-6 h-6 text-center">{count} </p>
-                    </div>
+                                <p className="md:ml-20 ">quantity :</p>
+                                <p className="border w-6 h-6 text-center">{count} </p>
+                        </div>
+                   </div>
                 </li>
-            </div>
+            </>
      );
 }
  

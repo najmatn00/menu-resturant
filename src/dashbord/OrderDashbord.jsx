@@ -26,11 +26,11 @@ const OrderDashbord = () => {
         setShowOrders(Orders)
     }
     return ( 
-        <div className="w-1/2 flex flex-col gap-2 pt-4">
+        <div className="md:w-1/3 w-2/3 flex flex-col gap-2 pt-4">
                 {showOrders.length>0?
                    <div className="flex items-center justify-center flex-col">
                     
-                        <ul className="w-5/6 flex items-center justify-evenly bg-white rounded-xl py-4 mb-4 ">
+                        <ul className="md:w-5/6 w-full flex items-center justify-evenly bg-white rounded-xl py-4 mb-4 ">
                             <li onClick={filterByPrice} className=" cursor-pointer ">price</li>
                             <li onClick={filterByCount} className=" cursor-pointer ">count</li>
                             <li onClick={filterByDate} className=" cursor-pointer ">date</li>

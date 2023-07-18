@@ -1,6 +1,7 @@
 import Button from "../ui/Button";
 import img from "../assets/img/foodd.png";
-import { Link, useNavigate } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
 const MainBase = () => {
     let navigate=useNavigate();
     let clickHandler=()=>{
@@ -9,17 +10,17 @@ const MainBase = () => {
     return ( <>
     <div className="flex  justify-evenly mt-4">
     <p className="Robt_bold text-6xl mt-6 ">it s not just <br/> Food, It s an<br/> Experience.</p>
-    <img className="rounded-full w-80 h-80 " src={img}  />
+    <img className="rounded-full hidden md:block md:w-80 md:h-80 " src={img}  />
     </div>
-    <div className="ml-64 flex gap-6 absolute top-64 mt-12 z-10">
+    <div className="ml-12 md:ml-64  flex gap-6  w-full absolute top-64 mt-32 z-10 ">
         <Button textColor={" text-white"} click={clickHandler}>View Menu</Button>
-        <Button color={"bg-white"} textColor={" text-black"}>Book A Table </Button>
+        <Button classCss=" border p-2 px-4 rounded-3xl bg-[#D41B27]  text-sm " color={"bg-white"} textColor={" text-black"}>Book A Table </Button>
     </div>
-    <div className="flex justify-evenly items-center">
-    {/* <Card/>
-    <Card/>
-    <Card/>
-    <Card/> */}
+    <div className="flex pt-36  justify-evenly items-center md:pt-0 md:flex-row flex-col">
+        {/* <Card/>
+        <Card/>
+        <Card/>
+        <Card/> */}
     </div>
    
     </>);

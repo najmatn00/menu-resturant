@@ -4,7 +4,7 @@ const Dashbord = () => {
     return ( 
         <>
         <div className=" flex items-center justify-center flex-col">
-            <ul className="w-2/4 h-16 mt-4 rounded-lg bg-white flex justify-evenly items-center ">
+            <ul className="md:w-2/4 w-3/4 h-16 mt-4 rounded-lg bg-white flex justify-evenly items-center ">
                 <NavLink to={"order"}>orders</NavLink>
                 <NavLink to={"acount"}>Acounts</NavLink>
             </ul>
