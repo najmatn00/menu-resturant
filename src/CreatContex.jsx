@@ -5,7 +5,6 @@ const showPupUpDetailFood=createContext();
 const historyOrder=createContext();
 const CreatContext = ({children}) => {
     const [cart,setCart]=useState([]);
-<<<<<<< HEAD
     const [showPubhup,setShowPubhup]=useState(false);
     const [Orders,setOrders]=useState([]);
     return (
@@ -17,12 +16,6 @@ const CreatContext = ({children}) => {
                 </historyOrder.Provider>
             </creatContextt.Provider >
     );
-=======
-    return (
-    <creatContextt.Provider value={{cart,setCart}}>
-        {children}
-    </creatContextt.Provider >);
->>>>>>> mobile
 }
 const useContextState = () => {
     return ( 

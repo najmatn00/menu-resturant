@@ -1,11 +1,7 @@
 import Button from "../ui/Button";
 import img from "../assets/img/foodd.png";
-<<<<<<< HEAD
-import { Link, useNavigate } from "react-router-dom";
-=======
 
 import { useNavigate } from "react-router-dom";
->>>>>>> mobile
 const MainBase = () => {
     let navigate=useNavigate();
     let clickHandler=()=>{
@@ -20,19 +16,11 @@ const MainBase = () => {
         <Button textColor={" text-white"} click={clickHandler}>View Menu</Button>
         <Button classCss=" border p-2 px-4 rounded-3xl bg-[#D41B27]  text-sm " color={"bg-white"} textColor={" text-black"}>Book A Table </Button>
     </div>
-<<<<<<< HEAD
-    <div className="flex justify-evenly items-center">
-    {/* <Card/>
-    <Card/>
-    <Card/>
-    <Card/> */}
-=======
     <div className="flex pt-36  justify-evenly items-center md:pt-0 md:flex-row flex-col">
+        {/* <Card/>
         <Card/>
         <Card/>
-        <Card/>
-        <Card/>
->>>>>>> mobile
+        <Card/> */}
     </div>
    
     </>);
