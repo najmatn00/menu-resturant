@@ -6,8 +6,8 @@ const ShopCart = () => {
     let {cart} = useContextState();
 
     return (
-            <div className="flex  justify-evenly mt-8">
-                <div className=" w-2/3 bg-white rounded-md">
+            <div className="flex md:flex-row items-center justify-center md:items-start flex-col gap-8 md:justify-evenly md:mt-8">
+                <div className="md:w-2/3 w-full bg-white rounded-md pb-8">
                    {cart.length>0?
                     cart.map(e=>{
                         let {prodact}= e;
@@ -23,7 +23,7 @@ const ShopCart = () => {
                          )
  
                      }):
-                     <div className=" mx-12 mt-9 justify-center border rounded-xl list-none  p-6 flex items-center gap-2">
+                     <div className=" mx-12 mt-9 border rounded-xl list-none  p-12 flex items-center justify-center  ">
                         <p className="Robt_bold ">no prouduct</p>
                      </div>
                      
