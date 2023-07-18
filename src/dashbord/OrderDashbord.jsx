@@ -4,10 +4,24 @@ import { useState } from "react";
 const OrderDashbord = () => {
     let {Orders} =useContextStateHistoryOrder();
     let [showOrders,setShowOrders] =useState(Orders);
-   
-    
+    console.log(Orders);
+    let getProdactCount=(a)=>{
+        let count=0;
+        a.prodact.map((e)=>{
+            count+=e.count
+        })
+        return count
+    }
+    let cow=(a)=>{
+        console.log(a);
+        const timeString = a.time;
+        const [hours, minutes] = timeString.split(':').map(Number);
+        
+        const totalMinutes = hours * 60 + minutes;
+        // console.log(totalMinutes); // Output: 722
+        return totalMinutes
+    }
     let filterByPrice=()=>{
-
         let l=[...Orders]
        l.sort((first,secand)=>{
         return   secand.total-first.total;
@@ -17,10 +31,19 @@ const OrderDashbord = () => {
     // console.log(showOrders);
     }
     let filterByCount=()=>{
-        
+        let l=[...Orders]
+       l.sort((first,secand)=>{
+        return   getProdactCount(secand)-getProdactCount(first);
+       })
+       setShowOrders(l)
     }
+
     let filterByDate=()=>{
-        
+    let B=[...Orders]
+    B.sort((a,b)=>{
+        return cow(b)-cow(a)
+    })
+    setShowOrders(B)
     }
     let deletFiltter=()=>{
         setShowOrders(Orders)

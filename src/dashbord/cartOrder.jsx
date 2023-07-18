@@ -3,7 +3,7 @@ import PupubShowMore from "../shoppingCard/pupubShowMore";
 
 const CartOrder = ({id,time,prodact}) => {
     const [showMore,setShowMore]=useState(false);
-
+    console.log(prodact);
     let total =0
     prodact.map(item=>{
        total+= item.prodact.price*item.count
