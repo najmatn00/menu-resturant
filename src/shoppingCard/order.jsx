@@ -5,7 +5,7 @@ const Order = ({name,discripton,star,price,count}) => {
     
     return ( 
             <>
-                <li className="bg-white md:mx-12 mt-6 p-4 md:p-6  border rounded-xl list-none  flex  items-center md:gap-2" >
+                <li className="bg-white md:mx-12 mt-6 p-4 md:p-6  border rounded-xl list-none mx-4 flex  items-center md:gap-2" >
                     <div className="">
                         <img className="w-24 h-24 rounded-full" src={imgfood} alt="" srcset="" />
                     </div>

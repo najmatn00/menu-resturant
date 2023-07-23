@@ -1,14 +1,11 @@
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+
+import { useContextStateUser } from "../CreatContex";
 
 const CheckUserLogin = ({children}) => {
-
-   
-    let username ="amin"
-    console.log(children);
-
     return(
         <div className="">
-            {username==="amin"?
+            {IsLogin()?
                 children
             :
             (<Navigate to='/signIn'/>)
@@ -17,5 +14,9 @@ const CheckUserLogin = ({children}) => {
     )
 
 }
- 
+let IsLogin=()=>{
+    let {user}=useContextStateUser();
+    return user.name==="amin";
+}
+export {IsLogin};
 export default CheckUserLogin;

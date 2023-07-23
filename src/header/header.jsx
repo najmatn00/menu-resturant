@@ -2,15 +2,15 @@ import Li from "./Li";
 import { BsHandbag } from 'react-icons/bs';
 import Button from "../ui/Button"
 import { useContextState } from "../CreatContex";
-import { Link, useNavigate,NavLink} from "react-router-dom";
+import { Link,NavLink} from "react-router-dom";
 import { useState } from "react";
-// import SignUp from "../signup/signIn";
-import CheckUserLogin from "../utility/checkuserLogin";
+import { IsLogin } from "../utility/checkuserLogin";
+
 import SignIn from "../signup/signIn";
 
 
 const Header = () => {
-    let navigate= useNavigate();
+    
     let [showPubhup,setShowPubhup]=useState(false);
     let clickHandler=()=>{
         // navigate("/signup")
@@ -54,8 +54,9 @@ const Header = () => {
         }
             
         </div>
-        <Button click={clickHandler}  textColor={" text-white"}>Sign In</Button>
-        <NavLink to='/dashbord' >dashbord</NavLink>
+        {!IsLogin() && <Button click={clickHandler}  textColor={" text-white"}>Sign In</Button>
+        }
+        {IsLogin() && <NavLink to='/dashbord' >dashbord</NavLink>}
         {showPubhup && <SignIn closeHandler={setShowPubhup}/>}
         </div>
     </div>

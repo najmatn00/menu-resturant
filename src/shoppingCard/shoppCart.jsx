@@ -7,7 +7,7 @@ const ShopCart = () => {
 
     return (
             <div className="flex md:flex-row items-center justify-center md:items-start flex-col gap-8 md:justify-evenly md:mt-8">
-                <div className="md:w-2/3 w-full bg-white rounded-md pb-8">
+                <div className="md:w-2/3 w-3/4  bg-white rounded-md pb-8">
                    {cart.length>0?
                     cart.map(e=>{
                         let {prodact}= e;
@@ -23,7 +23,7 @@ const ShopCart = () => {
                          )
  
                      }):
-                     <div className=" mx-12 mt-9 border rounded-xl list-none  p-12 flex items-center justify-center  ">
+                     <div className=" md:mx-12 mt-9 border rounded-xl list-none  p-12 flex items-center justify-center  ">
                         <p className="Robt_bold ">no prouduct</p>
                      </div>
                      

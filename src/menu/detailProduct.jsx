@@ -34,7 +34,7 @@ const DetailProduct = () => {
                   return e.map(obj => {
                     if (obj.prodact.name === respanse.prodact.name) {
                         
-                      return { ...obj, count: obj.count+=.5 };
+                      return { ...obj, count: obj.count+=1 };
                     }
                     return obj;
                   });
@@ -55,11 +55,11 @@ const DetailProduct = () => {
         <>
         {showPubhup &&
           <div className="flex items-center justify-center bg-transparant-black h-screen mt-16 fixed top-0 left-0 w-full">
-              <div className="flex flex-col justify-around items-center bg-white rounded-md w-1/3 h-2/4 -mt-10 relative">
+              <div className="flex flex-col justify-around items-center bg-white rounded-md md:w-1/3 md:h-3/5 -mt-10 relative h-90 w-3/4">
                 <AiOutlineCloseCircle onClick={clickHandler} className='absolute right-3 top-3 w-8 h-8'/>
-                <img className="w-64 h-64 rounded-full absolute -top-32" src={pasta} alt="" />
-                <div className="flex flex-col mt-28 justify-center items-center gap-8 h-full">
-                  <h1 className="w-full text-center Robt_bold text-2xl">{userChoice.name}</h1>
+                <img className="md:w-64 md:h-64 w-48 h-48 rounded-full absolute md:-top-24 -top-16" src={pasta} alt="" />
+                <div className="flex flex-col md:mt-32 mt-32 justify-center items-center md:gap-6 gap-4 h-full ">
+                  <h1 className="w-full text-center Robt_bold text-2xl  md:mt-6">{userChoice.name}</h1>
                   <p className="w-2/3 Robt_regular text-center"> 
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus ipsum aliquid, expedita ut molestiae libero. Autem blanditiis consectetur aut minima.
                   </p>

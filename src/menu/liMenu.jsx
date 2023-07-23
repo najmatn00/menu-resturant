@@ -23,7 +23,7 @@ const LiMenu = ({foodName,discripton,star,price,item}) => {
                   return e.map(obj => {
                     if (obj.prodact.name === respanse.prodact.name) {
                         
-                      return { ...obj, count: obj.count+=.5 };
+                      return { ...obj, count: obj.count+=1 };
                     }
                     return obj;
                   });
