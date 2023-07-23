@@ -21,9 +21,9 @@ const MainBase = () => {
         <Card/>
         <Card/>
         <Card/> */}
-        <Snap></Snap>
+        
     </div>
-   
+    <Snap></Snap>
     </>);
 
 }
