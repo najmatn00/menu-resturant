@@ -18,10 +18,11 @@ const CardMenu = () => {
         
     }
     
-    let clickHandlerStar=(event)=>{
-        // setfoodlist(menuList.filter((item)=>{
-            // return item.star===(event.target.length)
-        // }))
+    let clickHandlerStar=(e)=>{
+        // console.log(Number(e.target.children[0].ariaLabel[0]));
+        setfoodlist(menuList.filter((item)=>{
+            return  item.star==Number(e.target.children[0].ariaLabel[0]);
+          }))
       
     }
     let changeHandlerRangePrice=(event)=>{

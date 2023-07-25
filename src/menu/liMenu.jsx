@@ -3,7 +3,9 @@ import cartImg from "../assets/img/unnamed.png";
 import { AiOutlineStar } from 'react-icons/ai';
 import { useContextState } from "../CreatContex";
 import { useContextStateshowPupUpDetailFood } from "../CreatContex";
+import { Rating } from "@mui/material";
 const LiMenu = ({foodName,discripton,star,price,item}) => {
+    
     let {cart,setCart}=useContextState();
     
     let {setShowPubhup} =useContextStateshowPupUpDetailFood();
@@ -51,12 +53,7 @@ const LiMenu = ({foodName,discripton,star,price,item}) => {
                 <h2  className="foodname ">{foodName}</h2>
                 <p className="dis">{discripton}</p>
                 <div className="flex items-center">
-                    <AiOutlineStar/>
-                    <AiOutlineStar/>
-                    <AiOutlineStar/>
-                    <AiOutlineStar/>
-                    <AiOutlineStar/>
-                    <p className="ml-2 star">{star}</p>
+                    <Rating value={star}  name="read-only" readOnly/>
                 </div>
                 <div className="flex items-center ">
                     <p className="price">{price}</p>
