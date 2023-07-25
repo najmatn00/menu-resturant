@@ -3,7 +3,8 @@
     "price":23,
     "id":1,
     "category":"pasta",
-    "star":5
+    "star":5,
+    "img":"",
 },
 {
     "name":"hamburger",

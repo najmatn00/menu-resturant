@@ -1,71 +1,30 @@
+import { Rating } from "@mui/material";
 import img from "../../src/assets/img/pizza.webp"
-import img1 from "../../src/assets/img/foodd.png"
-import img2 from "../../src/assets/img/daisys_one_pot_pasta_1024x768.webp"
-
+import img2 from "../assets/img/foodd.png"
+import {menuList} from '../data/menu-lis.js'
 
 const Snap = () => {
-    return (<div className=" md:px-32 px-10">
-    <div className="overflow-x-auto snap-x w-full flex gap-8 md:mt-14 mt-20 over ">
+      let foodlist=[...menuList];
+      foodlist.sort((a,b)=>b.star-a.star)
+      console.log(foodlist);
+    return (
+    <div className=" md:px-32 px-10 h-auto">
+      <div className="overflow-x-auto snap-x w-full flex gap-8 md:mt-14 mt-20 over ">
         
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img1} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img2} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img1} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img2} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img1} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img2} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        <div className="snap-start w-32 h-32">
-           <div className="w-32 h-32">
-                 <img src={img1} className="w-32 h-32 rounded-xl" alt="" />
-           </div>
-        </div>
-        
-        
-    </div>
-    
+                  {foodlist.map((item)=>{
+                        return ( 
+                        <div className="snap-start bg-white rounded-lg p-4 ">
+                           <div className="w-fit flex flex-col gap-4">
+                               <img src={img} alt="" />
+                                 <p>{item.name}</p>
+                                 <p>
+                                    <Rating value={item.star}/>
+                                 </p>
+                           </div>
+                       
+                        </div>)
+                  })}
+                   </div>
     </div>
       );
 }
