@@ -24,7 +24,7 @@ const ContactForm = () => {
         console.log("submit");
     }
     return ( <>
-        <div className=" rounded-xl md:h-96 bg-white p-4 flex flex-col md:flex-row gap-4 w-full md:w-auto">
+        <div className=" rounded-xl md:h-96 bg-white p-4 flex flex-col md:flex-row gap-4 w-80 md:w-auto">
                 <div className=" flex flex-col gap-4">
                     <p>Contact Form</p>
                     <input onChange={ChangeHandlerUserName} type="text" placeholder="user name"  className="border border-gray-300 py-2 px-4 rounded-md" />

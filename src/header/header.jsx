@@ -5,9 +5,9 @@ import { useContextState } from "../CreatContex";
 import { Link,NavLink} from "react-router-dom";
 import { useState } from "react";
 import { IsLogin } from "../utility/checkuserLogin";
-
+import {AiOutlineMenu} from "react-icons/ai"
 import SignIn from "../signup/signIn";
-
+import {SlClose} from "react-icons/sl";
 
 const Header = () => {
     
@@ -30,6 +30,13 @@ const Header = () => {
         );
         return count;
     }
+    let [showMenu,setShowMenu]=useState(false);
+    let menuClickHandler=()=>{
+       setShowMenu(true)
+    }
+    let backgroudClickHandler=()=>{
+        setShowMenu(false)
+    }
     return (
          <div className="h-16 flex justify-between px-2 md:px-0 md:mr-8 items-center md:gap-32 sticky bg-[#E7E0E0] z-40  top-0">
             <Link to={"/"} className="block">
@@ -45,6 +52,17 @@ const Header = () => {
             <Li><NavLink className={isActivePage} to={'/about-us'}>About us</NavLink></Li>
             <Li><NavLink className={isActivePage} to={'/contact'}>Contact</NavLink></Li>
         </div>
+       
+        {showMenu && <div className=" md:hidden bg-[#e7e0e0] absolute top-0 right-0 text-right z-50 h-screen w-2/5 flex flex-col gap-4 p-6">
+            <Li><NavLink className={isActivePage} to='/'>Home</NavLink></Li>
+            <Li><NavLink className={isActivePage}  to='/menupage'>Menu</NavLink></Li>
+            <Li><NavLink className={isActivePage} to={'/about-us'}>About us</NavLink></Li>
+            <Li><NavLink className={isActivePage} to={'/contact'}>Contact</NavLink></Li>
+            {IsLogin() && <NavLink to='/dashbord' >dashbord</NavLink>}
+        </div>
+        }
+        {showMenu &&  <div onClick={backgroudClickHandler} className=" bg-transparant-black w-full h-screen fixed left-0 top-0"></div>}
+       
         <div className="flex items-center gap-4 ml-6">
         <div className=" relative">
             <Link to={'/shoppCart'}><BsHandbag className="w-6 h-6  top-0"/></Link>
@@ -52,11 +70,15 @@ const Header = () => {
             (<div className="border rounded-full w-6 h-6 bg-red-600 absolute -top-2 left-4 text-xs text-center flex justify-center items-center text-white">{countItem()}</div>)
             :null
         }
-            
         </div>
-        {!IsLogin() && <Button click={clickHandler}  textColor={" text-white"}>Sign In</Button>
+        <div className="md:hidden flex flex-end w-full ">
+            <AiOutlineMenu onClick={menuClickHandler} className="w-6 h-6 mr-1"/>
+        </div>
+        {!IsLogin() && <Button click={clickHandler}  textColor={" text-white"} >Sign In</Button>
         }
+        <div className=" hidden md:block">
         {IsLogin() && <NavLink to='/dashbord' >dashbord</NavLink>}
+        </div>
         {showPubhup && <SignIn closeHandler={setShowPubhup}/>}
         </div>
     </div>
