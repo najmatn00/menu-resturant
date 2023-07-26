@@ -46,7 +46,7 @@ const LiMenu = ({foodName,discripton,star,price,item}) => {
     }
     return ( <>
     <ul>
-        <li className="border p-4  bg-[#F7F7F7] rounded-xl relative">
+        <li className="border p-4 dark:bg-gray-600 dark:border-0  bg-[#F7F7F7] rounded-xl relative">
             <img onClick={clickHandler} className="w-8 h-8 absolute -top-4 right-2 cursor-pointer" src={cartImg} />
            <div className="" onClick={onOpenPubUpHandler}>
             <img className=" w-52 h-52" src={pasta} />

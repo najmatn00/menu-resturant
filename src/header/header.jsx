@@ -38,7 +38,7 @@ const Header = () => {
         setShowMenu(false)
     }
     return (
-         <div className="h-16 flex justify-between px-2 md:px-0 md:mr-8 items-center md:gap-32 sticky bg-[#E7E0E0] z-40  top-0">
+         <div className="dark:bg-[#111111] h-16 flex justify-between px-2 md:px-0 md:mr-8 items-center md:gap-32 sticky bg-[#E7E0E0] z-40  top-0">
             <Link to={"/"} className="block">
                 <div className="flex md:ml-24">
                     <h2  className="Robt_medium text-3xl">F</h2>
