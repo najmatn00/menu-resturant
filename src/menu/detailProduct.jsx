@@ -55,7 +55,7 @@ const DetailProduct = () => {
         <>
         {showPubhup &&
           <div className="flex items-center justify-center bg-transparant-black h-screen mt-16 fixed top-0 left-0 w-full">
-              <div className="flex flex-col justify-around items-center bg-white rounded-md md:w-1/3 md:h-3/5 -mt-10 relative h-90 w-3/4">
+              <div className="flex flex-col justify-around items-center dark:bg-gray-600 bg-white rounded-md md:w-1/3 md:h-3/5 -mt-10 relative py-5 md:py-0 w-3/4">
                 <AiOutlineCloseCircle onClick={clickHandler} className='absolute right-3 top-3 w-8 h-8'/>
                 <img className="md:w-64 md:h-64 w-48 h-48 rounded-full absolute md:-top-24 -top-16" src={pasta} alt="" />
                 <div className="flex flex-col md:mt-32 mt-32 justify-center items-center md:gap-6 gap-4 h-full ">
