@@ -35,15 +35,15 @@ const PaymentSummary = () => {
     return (<div className="">
     <h2 className="Robt_bold">Payment Summary</h2>
     <ul>
-        <li className="border bg-white w-80 h-80 rounded-xl">
-            <h2 className="border m-4 text-center bg-[#EBEAEF] rounded-xl">UNREGISTERED ACCOUNT</h2>
+        <li className="border bg-white w-80 h-80 rounded-xl dark:bg-gray-600">
+            <h2 className="border m-4 text-center dark:bg-[#111111] dark:border-0  rounded-xl">UNREGISTERED ACCOUNT</h2>
             <div className="flex justify-between mx-3">
                 <p className="text-[#ddd1e9]">Transactoin code</p>
                 <p>vc115665</p>
             </div>
             <div className="flex justify-between mx-3 mt-2">
-            <input type="text" placeholder="COUPON CODE" />
-            <Button textColor={"text-[#7FB3F4]"} color={"bg-[#DDEDFD]"}>Apply</Button>
+            <input type="text" placeholder="COUPON CODE"  className=" outline-none rounded-md pl-2 dark:bg-gray-500 text-white"/>
+            <Button textColor={"text-[#7FB3F4] dark:text-white"} color={"bg-[#DDEDFD] dark:bg-red-700"}>Apply</Button>
             </div>
             <div className="border h-.5 my-2 mx-2 bg-slate-100"></div>
             <div className="flex justify-between mx-3 mt-2">

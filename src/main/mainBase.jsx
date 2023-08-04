@@ -14,7 +14,7 @@ const MainBase = () => {
         </div>
         <div className="pl-12 md:pl-64  flex gap-6 mt-36 w-full absolute top-64 md:mt-24  z-10 ">
             <Button  textColor={" text-white"} click={clickHandler}>View Menu</Button>
-            <Button classCss=" border p-2 px-4 rounded-3xl bg-[#D41B27]  text-sm " color={"bg-white"} textColor={" text-black"}>Book A Table </Button>
+            <Button classCss=" border shadow-xl p-2 px-4 rounded-3xl bg-[#D41B27]  text-sm " color={"bg-white"} textColor={" text-black"}>Book A Table </Button>
         </div>
     {/* <p className=" absolute left-4 top-3/4 bg-[#D41B27] text-white p-2 rounded-xl">food picture</p> */}
     <Snap></Snap>

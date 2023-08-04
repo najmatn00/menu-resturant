@@ -36,7 +36,7 @@ const Header = () => {
         setShowMenu(false)
     }
     return (
-         <div className="h-16 flex justify-between px-2 md:px-0 md:mr-8 items-center md:gap-32 sticky bg-[#E7E0E0] z-40  top-0">
+         <div className="dark:bg-[#111111] h-16 flex justify-between px-2 md:px-0 md:mr-8 items-center md:gap-32 sticky bg-[#E7E0E0] z-40  top-0">
             <Link to={"/"} className="block">
                 <div className="flex md:ml-24">
                     <h2  className="Robt_medium text-3xl">F</h2>
@@ -62,18 +62,18 @@ const Header = () => {
         {showMenu &&  <div onClick={backgroudClickHandler} className=" bg-transparant-black w-full h-screen fixed left-0 top-0"></div>}
        
         <div className="flex items-center gap-4 ml-6">
-        <div className=" relative">
-            <Link to={'/shoppCart'}><BsHandbag className="w-6 h-6  top-0"/></Link>
-            {countItem()>0?
-            (<div className="border rounded-full w-6 h-6 bg-red-600 absolute -top-2 left-4 text-xs text-center flex justify-center items-center text-white">{countItem()}</div>)
-            :null
-        }
-        </div>
-        <div className="md:hidden flex flex-end w-full ">
-            <AiOutlineMenu onClick={menuClickHandler} className="w-6 h-6 mr-1"/>
-        </div>
-        {!IsLogin() && <Button click={clickHandler}  textColor={" text-white"} >Sign In</Button>
-        }
+            <div className=" relative">
+                <Link to={'/shoppCart'}><BsHandbag className="w-6 h-6  top-0"/></Link>
+                {countItem()>0?
+                (<div className="border rounded-full w-6 h-6 bg-red-600 absolute -top-2 left-4 text-xs text-center flex justify-center items-center text-white">{countItem()}</div>)
+                :null
+            }
+            </div>
+            <div className="md:hidden flex flex-end w-full ">
+                <AiOutlineMenu onClick={menuClickHandler} className="w-6 h-6 mr-1"/>
+            </div>
+            {!IsLogin() && <Button click={clickHandler} classCss="border px-4 rounded-3xl bg-[#D41B27]  text-sm dark:border-0  shadow-md shadow-red-600"  textColor={" text-white"} >Sign In</Button>
+            }
         <div className=" hidden md:block">
         {IsLogin() && <NavLink to='/dashbord' >dashbord</NavLink>}
         </div>

@@ -12,7 +12,7 @@ const FiltterProdact = ({
                 
     return ( 
         <>
-             <div className=" md:w-1/6 ml-2 md:fixed right-5 border-2  border-[#E0E0E6] mt-6 rounded-xl bg-[#F7F7F7] md:top-24 p-4">
+             <div className=" md:w-1/6 ml-2 md:fixed right-5 border-2 dark:bg-[#111111] border-[#E0E0E6] mt-6 rounded-xl bg-[#F7F7F7] md:top-24 p-4">
                 <div className="flex justify-around flex-col">
                         <div className="flex justify-between">
                         <h2>filters</h2>
