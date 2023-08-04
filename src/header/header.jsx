@@ -51,7 +51,7 @@ const Header = () => {
             <Li><NavLink className={isActivePage} to={'/contact'}>Contact</NavLink></Li>
         </div>
        
-        {showMenu && <div className=" md:hidden bg-[#e7e0e0] absolute top-0 right-0 text-right z-50 h-screen w-2/5 flex flex-col gap-4 p-6">
+        {showMenu && <div className=" md:hidden dark:bg-gray-600 bg-[#e7e0e0] absolute top-0 right-0 text-right z-50 h-screen w-2/5 flex flex-col gap-4 p-6">
             <Li><NavLink className={isActivePage} to='/'>Home</NavLink></Li>
             <Li><NavLink className={isActivePage}  to='/menupage'>Menu</NavLink></Li>
             <Li><NavLink className={isActivePage} to={'/about-us'}>About us</NavLink></Li>
