@@ -1,17 +1,23 @@
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineCloseCircle } from 'react-icons/ai';
+import SignUp from './signUp';
 const SignIn = ({closeHandler}) => {
+    // true => sign-in
+    // false => sign-up
+    let [choice,setChoice] = useState(true)
     let clickHandlerClose=()=>{
         closeHandler(false)
     }
-    let navigate=useNavigate();
+    
     let clickHandlerbutton=()=>{
-        navigate("signUp");
+        // navigate("signUp");
+        setChoice(!choice)
     }
     return (<>
     
-    <div className="bg-transparant-black flex justify-center items-center h-screen w-screen fixed top-16 left-0 ">
+    {choice ?
+    (<div className="bg-transparant-black flex justify-center items-center h-screen w-screen fixed top-16 left-0 ">
     <div className=" border bg-[#EBE9F5] dark:bg-gray-600 dark:border-0 w-96 h-96 rounded-3xl">
     <div className="flex items-center">
     <p className="Robt_bold m-4">Sign In</p>
@@ -29,13 +35,15 @@ const SignIn = ({closeHandler}) => {
     <button className="bg-[#D41B27] text-white  py-2 mt-4 rounded-xl px-36">Sign in</button>
     </div>
     <div className="flex items-center mt-16 justify-center gap-2">
-    <p className="Robat_regular text-xs   ">Already have an account ? </p>
+    <p className="Robat_regular text-xs   ">Don't have an account? </p>
     {/* <Button textColor={"text-white"} color={" bg-[#D41B27]"}>sign up</Button> */}
     <button onClick={clickHandlerbutton} className='text-[#D41B27] '>Sign Up</button>
     </div>
     </div>
         
-    </div> 
+    </div> ):
+    <SignUp handller={clickHandlerbutton} HandlerClose={clickHandlerClose}/>
+    }
     </> );
 }
  

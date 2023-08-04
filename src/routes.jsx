@@ -26,7 +26,7 @@ let routes = [
         {path:"acount",element:<Acounts/>},
     ]},
     {path:"/signIn",element:<SignInPage/>},
-    {path:"/signUp",element:<SignUp/>},
+    // {path:"/signUp",element:<SignUp/>},
    
    
 ];
