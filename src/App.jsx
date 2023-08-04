@@ -2,7 +2,7 @@ import Header from './header/header'
 import routes from './routes'
 import "./index.css"
 import CreatContext from "./CreatContex"
-import { Route,Routes,useRoutes } from 'react-router-dom'
+import { useRoutes } from 'react-router-dom'
 
 function App() {
 

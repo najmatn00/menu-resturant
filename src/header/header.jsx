@@ -7,8 +7,6 @@ import { useState } from "react";
 import { IsLogin } from "../utility/checkuserLogin";
 import {AiOutlineMenu} from "react-icons/ai"
 import SignIn from "../signup/signIn";
-import {SlClose} from "react-icons/sl";
-
 const Header = () => {
     
     let [showPubhup,setShowPubhup]=useState(false);
