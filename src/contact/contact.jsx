@@ -5,7 +5,7 @@ import ContactsHeader from './contactsHader'
 import ContactForm from './contactForm'
 const Contact = () => {
     return ( <div>
-                <div className="flex flex-col  justify-center items-center mt-8 gap-2">
+                <div className="flex  flex-col  justify-center items-center mt-8 gap-2">
 
                     <h1 className="Robt_bold text-3xl text-white">Get in touch</h1>
                     <p className="Robt-regular text-white ">Contact us for a guote</p>
