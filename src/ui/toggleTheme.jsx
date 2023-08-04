@@ -8,7 +8,7 @@ const ThemeMain = ({theme,setTheme}) => {
     setTheme(!theme)
    }
     return ( 
-        <div className=" absolute bottom-5 left-10 w-16 h-16  rounded-full border ">  
+        <div className=" fixed bottom-5 left-10 w-16 h-16  rounded-full border ">  
                {theme?
                 <div className=" w-full h-full bg-white rounded-full flex items-center justify-center">
                     <BsFillMoonFill  onClick={chengeThemeHandler} className="w-10 h-10 text-slate-800"/>

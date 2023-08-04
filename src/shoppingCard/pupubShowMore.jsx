@@ -7,8 +7,8 @@ const PupubShowMore = ({setShowMore,prodact}) => {
     }
     return (<>
     
-    <div className="bg-transparant-black flex justify-center items-center h-screen w-screen fixed top-16 left-0 ">
-        <div className=" border bg-[#EBE9F5] w-96 h-96 rounded-3xl">
+    <div className="bg-transparant-black  flex justify-center items-center h-screen w-screen fixed top-16 left-0 ">
+        <div className=" border dark:bg-gray-600 bg-[#EBE9F5] w-96 h-96 rounded-3xl">
             <div className="flex items-center">
                 <div className=" flex justify-end w-full mr-4 m-2">
                      <AiOutlineCloseCircle onClick={clickHandlerClose} className='w-8 h-8'/>
