@@ -1,12 +1,12 @@
 import Li from "./Li";
 import { BsHandbag } from 'react-icons/bs';
-import Button from "../ui/Button"
-import { useContextState } from "../CreatContex";
+import Button from "../../ui/Button"
+import { useContextState } from "../../CreatContex";
 import { Link,NavLink} from "react-router-dom";
 import { useState } from "react";
-import { IsLogin } from "../utility/checkuserLogin";
+import { IsLogin } from "../../utility/checkuserLogin";
 import {AiOutlineMenu} from "react-icons/ai"
-import SignIn from "../signup/signIn";
+import SignIn from "../../pages/signup/signIn";
 const Header = () => {
     
     let [showPubhup,setShowPubhup]=useState(false);

@@ -1,8 +1,8 @@
-import pasta from "../assets/img/foodd.png";
-import cartImg from "../assets/img/unnamed.png";
+import pasta from "../../assets/img/foodd.png";
+import cartImg from "../../assets/img/unnamed.png";
 import { AiOutlineStar } from 'react-icons/ai';
-import { useContextState } from "../CreatContex";
-import { useContextStateshowPupUpDetailFood } from "../CreatContex";
+import { useContextState } from "../../CreatContex";
+import { useContextStateshowPupUpDetailFood } from "../../CreatContex";
 import { Rating } from "@mui/material";
 const LiMenu = ({foodName,discripton,star,price,item}) => {
     

@@ -1,4 +1,4 @@
-import imgfood from '../assets/img/foodd.png';
+import imgfood from '../../assets/img/foodd.png';
 
 
 const Order = ({name,discripton,star,price,count}) => {

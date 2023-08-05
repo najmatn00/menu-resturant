@@ -1,7 +1,7 @@
 import Order from "./order";
 import PaymentSummary from "./paymentSummary";
-import { useContextState } from "../CreatContex";
-import Button from "../ui/Button";
+import { useContextState } from "../../CreatContex";
+import Button from "../../ui/Button";
 const ShopCart = () => {
     let {cart} = useContextState();
 

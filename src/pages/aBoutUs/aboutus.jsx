@@ -1,5 +1,5 @@
-import pizza from "../assets/img/pizza2.png"
-import pasta from "../assets/img/pasta.png"
+import pizza from "../../assets/img/pizza2.png"
+import pasta from "../../assets/img/pasta.png"
 const ABoutUS = () => {
     return (  <><img className=" w-1/4 rotate-6 float-right mx-6 rounded-xl" src={pizza}></img>
     <img className=" w-1/3  -rotate-6 md:mt-64 mt-80 rounded-xl" src={pasta}></img>

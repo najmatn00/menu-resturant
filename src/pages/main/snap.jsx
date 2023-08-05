@@ -1,7 +1,7 @@
 import { Rating } from "@mui/material";
-import img from "../../src/assets/img/pizza.webp"
-import img2 from "../assets/img/foodd.png"
-import {menuList} from '../data/menu-lis.js'
+import img from "../../assets/img/pizza.webp"
+import img2 from "../../assets/img/foodd.png"
+import {menuList} from '../../data/menu-lis.js'
 
 const Snap = () => {
       let foodlist=[...menuList];

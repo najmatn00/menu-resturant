@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { useContextStateUser } from "../CreatContex";
+import { useContextStateUser } from "../../CreatContex";
 const Dashbord = () => {
     let {setUser}=useContextStateUser();
     let isActivePage=(e)=>{

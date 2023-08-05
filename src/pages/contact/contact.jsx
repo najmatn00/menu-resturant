@@ -1,8 +1,8 @@
 import {CiLocationOn} from 'react-icons/ci'
 import {MdOutlineMailOutline} from 'react-icons/md'
 import {BsTelephone} from 'react-icons/bs'
-import ContactsHeader from './contactsHader'
-import ContactForm from './contactForm'
+import ContactsHeader from '../contact/contactsHader'
+import ContactForm from '../contact/contactForm'
 const Contact = () => {
     return ( <div>
                 <div className="flex  flex-col  justify-center items-center mt-8 gap-2">

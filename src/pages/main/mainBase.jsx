@@ -1,5 +1,5 @@
-import Button from "../ui/Button";
-import img from "../assets/img/foodd.png";
+import Button from "../../ui/Button";
+import img from "../../assets/img/foodd.png";
 import { useNavigate } from "react-router-dom";
 import Snap from "./snap";
 const MainBase = () => {

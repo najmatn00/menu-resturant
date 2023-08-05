@@ -1,6 +1,6 @@
 import AcountChild from "./acountChild";
-import Button from "../ui/Button";
-import { useContextStateUser } from "../CreatContex";
+import Button from "../../ui/Button";
+import { useContextStateUser } from "../../CreatContex";
 import { useState } from "react";
 const Acounts = () => {
     let {user,setUser}=useContextStateUser();

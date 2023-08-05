@@ -1,7 +1,7 @@
-import img from "../assets/img/foodd.png";
-import cartImg from "../assets/img/unnamed.png";
+import img from "../../assets/img/foodd.png";
+import cartImg from "../../assets/img/unnamed.png";
 
-import { useContextState} from "../CreatContex";
+import { useContextState} from "../../CreatContex";
 
 const Limain = ({foodname,price,text,item}) => {
     let {cart,setCart}=useContextState();

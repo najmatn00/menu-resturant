@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import { menuList } from "../data/menu-lis";
-import pasta from "../assets/img/foodd.png";
-import Button from '../ui/Button'
+import { menuList } from "../../data/menu-lis";
+import pasta from "../../assets/img/foodd.png";
+import Button from '../../ui/Button'
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { useContextState, useContextStateshowPupUpDetailFood } from "../CreatContex";
+import { useContextState, useContextStateshowPupUpDetailFood } from "../../CreatContex";
 
 const DetailProduct = () => {
     //product id clicked by user

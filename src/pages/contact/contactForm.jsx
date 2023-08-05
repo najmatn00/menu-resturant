@@ -1,4 +1,4 @@
-import Button from '../ui/Button'
+import Button from '../../ui/Button'
 import { useState } from 'react'
 const ContactForm = () => {
     let [dateContactUs,setDateContactUs] =useState({
