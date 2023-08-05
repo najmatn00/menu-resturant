@@ -1,6 +1,6 @@
 
-import StarAcardionItem from "../layout/starAcardionItem";
-import Accordion from "../ui/accordion";
+import StarAcardionItem from "../../layout/starAcardionItem";
+import Accordion from "../../ui/accordion";
 
 
 const FiltterProdact = ({

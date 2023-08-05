@@ -1,8 +1,8 @@
 import { useState } from "react";
-import LiMenu from "../pages/menu/liMenu";
-import { useContextStateshowPupUpDetailFood } from "../CreatContex";
-import { menuList } from "../data/menu-lis";
-import FiltterProdact from "../layout/filtter";
+import LiMenu from "./liMenu";
+import { useContextStateshowPupUpDetailFood } from "../../CreatContex";
+import { menuList } from "../../data/menu-lis";
+import FiltterProdact from "./filtter";
 import { Link, Outlet } from "react-router-dom";
 
 const CardMenu = () => {
@@ -17,14 +17,14 @@ const CardMenu = () => {
         }))
         
     }
-    
+    // filterd by star
     let clickHandlerStar=(e)=>{
-        // console.log(Number(e.target.children[0].ariaLabel[0]));
         setfoodlist(menuList.filter((item)=>{
             return  item.star==Number(e.target.children[0].ariaLabel[0]);
           }))
       
     }
+    // filter by price in menu 
     let changeHandlerRangePrice=(event)=>{
         
         setfoodlist(menuList.filter((item)=>{
@@ -32,6 +32,7 @@ const CardMenu = () => {
             return item.price<=event.target.value
         }))
     }
+    // delet all filter in use
     let deleteHandler=()=>{
         setfoodlist(menuList);
     }

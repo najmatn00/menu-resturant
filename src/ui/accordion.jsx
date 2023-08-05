@@ -2,7 +2,8 @@ import { useState } from 'react';
 import {FaAngleDown} from 'react-icons/fa'
 const Accordion = ({title,children,childrenClass="pl-4 py-2"}) => {
     const [show,setShow]=useState(false)
-    let clickHandler=()=>{
+    // 
+    let toggleAccordion=()=>{
       if(show){
         setShow(false)
       }
@@ -15,7 +16,7 @@ const Accordion = ({title,children,childrenClass="pl-4 py-2"}) => {
     return ( <>
        <div className="flex justify-between items-center mt-2">
         <p>{title}</p>
-        <FaAngleDown className='cursor-pointer' onClick={clickHandler}/>
+        <FaAngleDown className='cursor-pointer' onClick={toggleAccordion}/>
        </div>
        {show && <div className={childrenClass}>{children} </div>}
        

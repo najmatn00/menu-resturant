@@ -2,7 +2,9 @@ import { useContextState,useContextStateHistoryOrder } from "../../CreatContex";
 import Button from "../../ui/Button"
 
 const PaymentSummary = () => {
+    // cart import for  line 65 to check is Empty or not 
     let {cart,setCart}=useContextState();
+    // import for get totle pirce of order in cart
     let {Orders,setOrders}=useContextStateHistoryOrder();
 
     let totalPrice;
@@ -28,7 +30,7 @@ const PaymentSummary = () => {
             }]
         })
         setCart([]);
-        console.log(Orders);
+        
     }
 
  

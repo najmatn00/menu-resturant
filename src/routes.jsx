@@ -1,6 +1,6 @@
 import MenuPage from './pages/menu/menupage'
 import Contact from './pages/contact/contact'
-import ABoutUS from './pages/aBoutUs/aboutus'
+import ABoutUS from './pages/aboutUs/aboutus'
 import ShopCart from './pages/shoppingCard/shoppCart'
 import Dashbord from './pages/dashbord/dashbord'
 import MainBase from './pages/main/mainBase'
@@ -8,7 +8,7 @@ import CheckUserLogin from './utility/checkuserLogin'
 import SignInPage from './pages/signup/signinPage'
 import DetailProduct from './pages/menu/detailProduct'
 import SignUp from './pages/signup/signUp'
-import Acounts from './pages/dashbord/Acounts'
+import Acounts from './pages/dashbord/account'
 import OrderDashbord from './pages/dashbord/OrderDashbord'
 
 

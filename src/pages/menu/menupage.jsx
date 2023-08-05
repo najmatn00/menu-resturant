@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import CardMenu from "../../ui/CardMenu";
+import CardMenu from "./CardMenu";
 
 const MenuPage = () => {
     return ( <div className=" min-h-screen">

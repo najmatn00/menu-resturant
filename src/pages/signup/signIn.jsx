@@ -11,7 +11,7 @@ const SignIn = ({closeHandler}) => {
     }
     
     let clickHandlerbutton=()=>{
-        // navigate("signUp");
+        // use for which one was render (sin-in or sign-up)
         setChoice(!choice)
     }
     return (<>

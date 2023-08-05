@@ -3,6 +3,7 @@ import PaymentSummary from "./paymentSummary";
 import { useContextState } from "../../CreatContex";
 import Button from "../../ui/Button";
 const ShopCart = () => {
+    //to show list cart
     let {cart} = useContextState();
 
     return (

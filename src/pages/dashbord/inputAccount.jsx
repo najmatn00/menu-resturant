@@ -1,6 +1,6 @@
 
-const AcountChild = ({children,placeholer,stateHandler}) => {
-    console.log(children);
+const InputAccount = ({children,placeholer,stateHandler}) => {
+   
     let changeHandler=(e)=>{
         stateHandler(e.target.value);
     }
@@ -12,4 +12,4 @@ const AcountChild = ({children,placeholer,stateHandler}) => {
     </> );
 }
  
-export default AcountChild;
+export default InputAccount;
