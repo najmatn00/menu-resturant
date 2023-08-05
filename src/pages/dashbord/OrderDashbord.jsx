@@ -4,7 +4,7 @@ import { useState } from "react";
 const OrderDashbord = () => {
     let {Orders} =useContextStateHistoryOrder();
     let [showOrders,setShowOrders] =useState(Orders);
-    console.log(Orders);
+  
     let getProdactCount=(a)=>{
         let count=0;
         a.prodact.map((e)=>{
@@ -12,41 +12,42 @@ const OrderDashbord = () => {
         })
         return count
     }
-    let cow=(a)=>{
-        console.log(a);
+    // return time of order to pushing orders history prodact
+    let getTime=(a)=>{
+        
         const timeString = a.time;
         const [hours, minutes] = timeString.split(':').map(Number);
         
         const totalMinutes = hours * 60 + minutes;
-        // console.log(totalMinutes); // Output: 722
         return totalMinutes
     }
+
     let filterByPrice=()=>{
-        let l=[...Orders]
-       l.sort((first,secand)=>{
-        return   secand.total-first.total;
+        let filterdProdact=[...Orders]
+        filterdProdact.sort((first,secand)=>{
+            return   secand.total-first.total;
         })
         
-        setShowOrders(l)
-    // console.log(showOrders);
+        setShowOrders(filterdProdact)
     }
     let filterByCount=()=>{
-        let l=[...Orders]
-       l.sort((first,secand)=>{
+        let copyProdact=[...Orders]
+       copyProdact.sort((first,secand)=>{
         return   getProdactCount(secand)-getProdactCount(first);
        })
-       setShowOrders(l)
+       setShowOrders(copyProdact)
     }
 
     let filterByDate=()=>{
-    let B=[...Orders]
-    B.sort((a,b)=>{
-        return cow(b)-cow(a)
-    })
-    setShowOrders(B)
-    }
+        let copyProdact=[...Orders]
+        copyProdact.sort((a,b)=>{
+            return getTime(b)-getTime(a)
+        })
+        setShowOrders(copyProdact)
+     }
+    //  delet all filterd in use
     let deletFiltter=()=>{
-        setShowOrders(Orders)
+            setShowOrders(Orders)
     }
     return ( 
         <div className="md:w-1/3 w-2/3 flex flex-col gap-2 pt-4 ">

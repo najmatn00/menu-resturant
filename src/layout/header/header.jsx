@@ -10,16 +10,19 @@ import SignIn from "../../pages/signup/signIn";
 const Header = () => {
     
     let [showPubhup,setShowPubhup]=useState(false);
+    // show pupup sign-in sign-up in header 
     let clickHandler=()=>{
         // navigate("/signup")
         setShowPubhup(true)
     }
     let {cart}=useContextState();
+    // change style to show which one is on
     let isActivePage=(e)=>{
         if(e.isActive){
             return "text-red-600"
         }
     }
+    // count of card in red little baner
     let countItem=()=>{
         let count=0;
         cart.forEach(element => {
@@ -29,9 +32,11 @@ const Header = () => {
         return count;
     }
     let [showMenu,setShowMenu]=useState(false);
+    // show menu items (routes) or not
     let menuClickHandler=()=>{
        setShowMenu(true)
     }
+    // toggle background black
     let backgroudClickHandler=()=>{
         setShowMenu(false)
     }

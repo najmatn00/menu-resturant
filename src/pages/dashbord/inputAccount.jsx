@@ -1,6 +1,7 @@
 
 const InputAccount = ({children,placeholer,stateHandler}) => {
    
+    // change data of prodact
     let changeHandler=(e)=>{
         stateHandler(e.target.value);
     }

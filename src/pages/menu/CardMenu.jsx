@@ -3,7 +3,7 @@ import LiMenu from "./liMenu";
 import { useContextStateshowPupUpDetailFood } from "../../CreatContex";
 import { menuList } from "../../data/menu-lis";
 import FiltterProdact from "./filtter";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CardMenu = () => {
     let text=" Lorem ipsum dolor sit amet."

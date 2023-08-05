@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { useContextStateUser } from "../../CreatContex";
 const Dashbord = () => {
     let {setUser}=useContextStateUser();
+    // toggle between text to show which one is active 
     let isActivePage=(e)=>{
         if(e.isActive){
             return "text-red-600"

@@ -2,6 +2,7 @@
 import StarAcardionItem from "../../layout/starAcardionItem";
 import Accordion from "../../ui/accordion";
 
+// box that user can filter prodact
 
 const FiltterProdact = ({
         deleteHandler,

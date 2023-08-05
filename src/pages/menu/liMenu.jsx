@@ -6,10 +6,13 @@ import { useContextStateshowPupUpDetailFood } from "../../CreatContex";
 import { Rating } from "@mui/material";
 const LiMenu = ({foodName,discripton,star,price,item}) => {
     
+    // get data of cart and push new data on it
     let {cart,setCart}=useContextState();
-    
+
+    //  show pupup when click on card menu
     let {setShowPubhup} =useContextStateshowPupUpDetailFood();
 
+    // this handler use to pushing new data to context history order
     let clickHandler=()=>{
         let pushProdact={
             prodact:item,
