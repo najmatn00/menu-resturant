@@ -3,16 +3,18 @@ import routes from './routes'
 import "./index.css"
 import CreatContext from "./CreatContex"
 import {useRoutes } from 'react-router-dom'
-import ThemeMain from './ui/toggleTheme'
+import ToggleTheme from './ui/toggleTheme'
 import { useEffect,useRef,useState } from 'react'
 function App() {
 
+      // true => lite 
+      // false => dark
       let [theme,setTheme]=useState(false);
       let router = useRoutes(routes);
+      // accses the element for changing theme 
       let refTheme =useRef()
       useEffect(()=>{
          if(theme){
-            console.log("t");
             refTheme.current.className = " "
          }
          else {
@@ -29,7 +31,7 @@ function App() {
          {router}
          
       </div>
-     <ThemeMain theme={theme} setTheme={setTheme}/>
+     <ToggleTheme theme={theme} setTheme={setTheme}/>
     </div>
  </CreatContext>)
 }

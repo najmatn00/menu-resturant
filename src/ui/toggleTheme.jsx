@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {BsFillSunFill,BsFillMoonFill} from "react-icons/bs"
-const ThemeMain = ({theme,setTheme}) => {
+const ToggleTheme = ({theme,setTheme}) => {
     // false =>dark
     // true =>white
    
@@ -22,4 +22,4 @@ const ThemeMain = ({theme,setTheme}) => {
      );
 }
  
-export default ThemeMain;
+export default ToggleTheme;

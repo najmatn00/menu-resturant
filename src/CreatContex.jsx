@@ -1,16 +1,20 @@
 import {createContext,useContext,useState} from "react";
-import UserP from "./data/userData"
-const creatContextt=createContext();
+import userPerson from "./data/userData"
+const mainContex=createContext();
 const showPupUpDetailFood=createContext();
 const historyOrder=createContext();
 const userData=createContext();
 const CreatContext = ({children}) => {
+    // cart shop
     const [cart,setCart]=useState([]);
+    // show and popup the ditail in menu when click on 
     const [showPubhup,setShowPubhup]=useState(false);
+    // orders in history user
     const [Orders,setOrders]=useState([]);
-    const [user,setUser]=useState(UserP)
+    // is user login or not 
+    const [user,setUser]=useState(userPerson)
     return (
-            <creatContextt.Provider value={{cart,setCart}}>
+            <mainContex.Provider value={{cart,setCart}}>
                 <userData.Provider value={{user,setUser}}>
                     <historyOrder.Provider value={{Orders,setOrders}} >
                         <showPupUpDetailFood.Provider value={{showPubhup,setShowPubhup}}>
@@ -18,12 +22,12 @@ const CreatContext = ({children}) => {
                         </showPupUpDetailFood.Provider>
                     </historyOrder.Provider>
                 </userData.Provider>
-            </creatContextt.Provider >
+            </mainContex.Provider >
     );
 }
 const useContextState = () => {
     return ( 
-    useContext(creatContextt)
+    useContext(mainContex)
      );
 }
 const useContextStateshowPupUpDetailFood = () => {
@@ -43,6 +47,9 @@ const useContextStateUser = () => {
      );
 }
  
-export {useContextState,useContextStateshowPupUpDetailFood,useContextStateHistoryOrder,useContextStateUser};
+export {useContextState
+        ,useContextStateshowPupUpDetailFood
+        ,useContextStateHistoryOrder
+        ,useContextStateUser};
  
 export default CreatContext;
